@@ -13,17 +13,17 @@
 //    return $numbers[3];
 //}
 ////////////////////////////////
-function exercise2(): int
-{
-    /*
-    Pasinaudodami masyvo operatoriumi paimkite elementą, kurio reikšmė yra 3 ir grąžinkite tą reikšmę iš funkcijos.
-    */
-
-    $numbers = ['zero' => 0, 'one' => 1, 'two' => 2, 'three' => 3, 'four' => 4];
-
-    return $numbers["three"];
-}
-
+//function exercise2(): int
+//{
+//    /*
+//    Pasinaudodami masyvo operatoriumi paimkite elementą, kurio reikšmė yra 3 ir grąžinkite tą reikšmę iš funkcijos.
+//    */
+//
+//    $numbers = ['zero' => 0, 'one' => 1, 'two' => 2, 'three' => 3, 'four' => 4];
+//
+//    return $numbers["three"];
+//}
+//var_dump(exercise2());
 //function exercise3(): int
 //{
 //    /*
@@ -41,9 +41,9 @@ function exercise2(): int
 //        ],
 //    ];
 //
-//    return 0;
+//    return $numbers[2][1][2];
 //}
-//
+//var_dump(exercise3());
 //function exercise4(): int
 //{
 //    /*
@@ -61,8 +61,9 @@ function exercise2(): int
 //        ],
 //    ];
 //
-//    return 0;
+//    return $numbers['fourth']['value_2']['ninetynine'];
 //}
+//var_dump(exercise4());
 //
 //
 //function exercise5(): int
@@ -82,15 +83,16 @@ function exercise2(): int
 //        ],
 //    ];
 //
-//    return 0;
+//    return $numbers['fourth']['value_6'][0];
 //}
+//var_dump(exercise5());
 //
 //function exercise6(): int
 //{
 //    /*
 //    Pasinaudodami masyvo operatoriumi paimkite elementą, kurio reikšmė yra 99 ir grąžinkite tą reikšmę iš funkcijos.
 //    */
-//
+
 //    $numbers = [
 //        'first' => [0, 1],
 //        'third' => [1, 0, 2],
@@ -102,8 +104,9 @@ function exercise2(): int
 //        ],
 //    ];
 //
-//    return 0;
+//    return $numbers['fourth']['value_6'][0];
 //}
+//var_dump(exercise6());
 //
 //function exercise7(): array
 //{
@@ -114,19 +117,33 @@ function exercise2(): int
 //
 //    $numbers = ['zero' => 0, 'one' => 1, 'two' => 2, 'three' => 3, 'four' => 4];
 //
-//    return [];
+//    foreach ($numbers as $x => $value) {
+//        if ($value === 2) {
+//            unset($x);
+//        } else {
+//            var_dump($x);
+//        }
+//    }
+//return $numbers;
+
 //}
 //
+
 //function exercise8(): array
 //{
-//    /*
-//    Sunaikinkitę visas reikšmes, kurios dalijasi 2 ir grąžinkite masyvą
-//    Turėtumėte gauti masyvą: ['one' => 1, 'three' => 3, 'four' => 4, 'five' => 5]
-//    */
-//
+    /*
+    Sunaikinkitę visas reikšmes, kurios dalijasi 2 ir grąžinkite masyvą
+    Turėtumėte gauti masyvą: ['one' => 1, 'three' => 3, 'four' => 4, 'five' => 5]
+    */
+
 //    $numbers = ['ninety' => 90, 'one' => 1, 'two' => 2, 'three' => 3, 'four' => 4, 'five' => 5];
-//
-//    return [];
+//foreach ($numbers as $x => $value) {
+//    if ($value % 2 === 0) {
+//        unset($numbers[$x]);
+//    }
+//}
+//    echo $x . PHP_EOL;
+//    return $numbers;
 //}
 //
 //function exercise9(int $start, int $end): void
@@ -135,8 +152,12 @@ function exercise2(): int
 //    Išspausdinkite skaičius nuo $start iki $end pasinaudodami ciklu.
 //    Jeigu $start yra mažiau nei $end, funkcija nieko nespausdina.
 //    */
-//
+//while ($start < $end) {
+//    echo $start.PHP_EOL;
+//    $start++;
+//    }
 //}
+//exercise9(1,10);
 //
 //function exercise10(int $number): void
 //{
@@ -152,7 +173,19 @@ function exercise2(): int
 //    ...
 //    60
 //    */
+//
+//    $i = 0;
+//    while ($i < $number + 1) {
+//        if($i % 3 === 0) {
+//            echo $i.PHP_EOL;
+//
+//        }
+//        $i++;
+//    }
+//
+//
 //}
+//exercise10(60);
 //
 //function exercise11(int $number): void
 //{
@@ -168,7 +201,13 @@ function exercise2(): int
 //    1
 //    0
 //    */
+//    while ($number > -1) {
+//        echo $number.PHP_EOL;
+//        $number--;
+//
+//    }
 //}
+//exercise11(-1);
 //
 //function getNumbers(): array
 //{
